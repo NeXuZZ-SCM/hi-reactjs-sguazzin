@@ -2,12 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import NavBar from './components/NavBar';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider, createMuiTheme  } from '@material-ui/core/styles';
+
+const customTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main:'#00FF9B'
+    },
+    secondary:{
+      main:'#ff0066'
+    },
+  },
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ThemeProvider theme={customTheme}>
+    <React.StrictMode>
+      <NavBar />
+      <App />
+    </React.StrictMode>
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
