@@ -1,23 +1,14 @@
 import React from 'react';
-import {AppBar, Hidden,makeStyles, Toolbar, Typography,Button,IconButton,ClickAwayListener,Grow,Paper,Popper, MenuItem,MenuList} from '@material-ui/core';
+import {AppBar,useTheme, Drawer, List,Divider,ListItem,ListItemIcon,ListItemText, Hidden,makeStyles, Toolbar, Typography,Button,IconButton,ClickAwayListener,Grow,Paper,Popper, MenuItem,MenuList} from '@material-ui/core';
+//#region Import Icons
 import MenuIcon from '@material-ui/icons/Menu';
 import Store from '@material-ui/icons/Store';
 import Computer from '@material-ui/icons/Computer';
-
-
-
-import { useTheme } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-
+//#endregion
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -36,11 +27,9 @@ const useStyles = makeStyles((theme) => ({
 
 
 function NavBar(){
+    //#region Const
     const classes = useStyles();
     const [subMenu, setsubMenu] = React.useState(false);
-
-
-
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
     const theme = useTheme();
@@ -48,7 +37,6 @@ function NavBar(){
         setOpen((prevOpen) => !prevOpen);
         setsubMenu((prevOpen) => !prevOpen);
     };
-      
     const handleClose = (event) => {
         if (anchorRef.current && anchorRef.current.contains(event.target)) {
           return;
@@ -56,6 +44,8 @@ function NavBar(){
         setOpen(false);
         setsubMenu(false);
     };
+    //#endregion
+
     function handleListKeyDown(event) {
         if (event.key === 'Tab') {
           event.preventDefault();
@@ -63,15 +53,7 @@ function NavBar(){
           setsubMenu(false);
         }
     }
-
-
-    // const handleDrawerOpen = () => {
-    //     setsubMenu(true);
-    //   };
-    // const handleDrawerClose = () => {
-    //     setsubMenu(false);
-    //   };
-
+    //#region Return
     return(
 
         <div className={classes.root}>
@@ -139,10 +121,8 @@ function NavBar(){
         variant="persistent"
         anchor="left"
         open={subMenu}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-      >
+        classes={{paper: classes.drawerPaper,}}
+        >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleToggle}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
@@ -170,6 +150,7 @@ function NavBar(){
       </Hidden>
         </div>
     );
-}
+    //#endregion
+}//end function NavBar
 
 export default NavBar;

@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider, createMuiTheme  } from '@material-ui/core/styles';
 
+//#region CustomTheme
 const customTheme = createMuiTheme({
   palette: {
     primary: {
@@ -16,6 +17,7 @@ const customTheme = createMuiTheme({
     },
   },
 });
+//#endregion
 
 ReactDOM.render(
   <ThemeProvider theme={customTheme}>
