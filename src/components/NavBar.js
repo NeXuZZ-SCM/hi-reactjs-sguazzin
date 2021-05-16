@@ -1,19 +1,7 @@
 import React from 'react';
-import {AppBar,useTheme, Drawer, List,Divider,ListItem,ListItemIcon,ListItemText, Hidden,makeStyles, Toolbar, Typography,Button,IconButton,ClickAwayListener,Grow,Paper,Popper, MenuItem,MenuList} from '@material-ui/core';
-//#region Import Icons
-import MenuIcon from '@material-ui/icons/Menu';
-import Store from '@material-ui/icons/Store';
-import Computer from '@material-ui/icons/Computer';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import {AppBar, useTheme, Drawer, List,Divider, ListItem, ListItemIcon, ListItemText, Hidden, makeStyles, Toolbar, Typography, Button, IconButton, ClickAwayListener, Grow, Paper, Popper, MenuItem, MenuList} from '@material-ui/core';
+import {Menu, Store, Computer, ChevronLeft, ChevronRight, MoveToInbox, Mail, ShoppingCart, ContactPhone, EmojiPeople} from '@material-ui/icons';
 import CartWidget from './CartWidget';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
-import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
-
-//#endregion
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -50,7 +38,6 @@ function NavBar(){
         setsubMenu(false);
     };
     //#endregion
-    //NuevoComentario
     function handleListKeyDown(event) {
         if (event.key === 'Tab') {
           event.preventDefault();
@@ -66,25 +53,17 @@ function NavBar(){
             <Toolbar>
                 <Hidden only={['md', 'lg', 'xl']}>
                 <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleToggle}>
-                    <MenuIcon />
+                    <Menu />
                 </IconButton>
                 </Hidden>
                 <Typography variant="h5" color="initial" className={classes.title}>
                 👋Hi-React
                 </Typography>
                 <Hidden only={['sm', 'xs']}>
-                <Button variant="outlined"
-                        color="default"
-                        className={classes.button}
-                        startIcon={<Store />}
-                        ref={anchorRef}
-                        aria-controls={open ? 'menu-list-grow' : undefined}
-                        aria-haspopup="true"
-                        onClick={handleToggle}>
+                <Button variant="contained" color="primary" className={classes.button} startIcon={<Store />} ref={anchorRef} aria-controls={open ? 'menu-list-grow' : undefined} aria-haspopup="true" onClick={handleToggle}>
                     <Typography variant="body1" className={classes.title}>
                     Nuestros Productos
                     </Typography>
-                    
                 </Button>
                 <CartWidget />
                 </Hidden>
@@ -125,14 +104,14 @@ function NavBar(){
         <Drawer className={classes.drawer} variant="persistent" anchor="left" open={subMenu} classes={{paper: classes.drawerPaper,}} >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleToggle}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {theme.direction === 'ltr' ? <ChevronLeft /> : <ChevronRight />}
           </IconButton>
         </div>
         <Divider />
         <List>
           {['Accesorios', 'Monitores', 'PC', 'Impresoras'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>{index % 2 === 0 ? <MoveToInbox /> : <Mail />}</ListItemIcon>
               <ListItemText primary={text} />                      
             </ListItem>
           ))}
@@ -140,7 +119,7 @@ function NavBar(){
         <Divider />
         <List>
             <ListItem button key="Carrito">
-              <ListItemIcon><ShoppingCartIcon /></ListItemIcon>
+              <ListItemIcon><ShoppingCart /></ListItemIcon>
               <ListItemText primary="Carrito"/>                      
             </ListItem>
         </List>
@@ -148,7 +127,7 @@ function NavBar(){
         <List>
           {['Quienes Somos?','Contacto'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <EmojiPeopleIcon /> : <ContactPhoneIcon />}</ListItemIcon>
+              <ListItemIcon>{index % 2 === 0 ? <EmojiPeople /> : <ContactPhone />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
