@@ -4,33 +4,13 @@ import './index.css';
 import App from './App';
 import NavBar from './components/NavBar';
 import reportWebVitals from './reportWebVitals';
-import { ThemeProvider, createMuiTheme  } from '@material-ui/core/styles';
 
-//#region CustomTheme
-const customTheme = createMuiTheme({
-  palette: {
-    primary: {
-      main:'#00FF9B'
-    },
-    secondary:{
-      main:'#ff0066'
-    },
-  },
-  typography: {
-    body2: {
-      fontSize: "1.5rem;"
-    },
-  },
-});
-//#endregion
 
 ReactDOM.render(
-  <ThemeProvider theme={customTheme}>
     <React.StrictMode>
       <NavBar />
       <App />
-    </React.StrictMode>
-  </ThemeProvider>,
+    </React.StrictMode>,
   document.getElementById('root')
 );
 
