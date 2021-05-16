@@ -8,6 +8,11 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import CartWidget from './CartWidget';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
+
 //#endregion
 
 const useStyles = makeStyles((theme) => ({
@@ -81,6 +86,7 @@ function NavBar(){
                     </Typography>
                     
                 </Button>
+                <CartWidget />
                 </Hidden>
                 <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
                 {({ TransitionProps, placement }) => (
@@ -116,13 +122,7 @@ function NavBar(){
             </Toolbar>
         </AppBar>
         <Hidden only={['md', 'lg', 'xl']}>
-        <Drawer
-        className={classes.drawer}
-        variant="persistent"
-        anchor="left"
-        open={subMenu}
-        classes={{paper: classes.drawerPaper,}}
-        >
+        <Drawer className={classes.drawer} variant="persistent" anchor="left" open={subMenu} classes={{paper: classes.drawerPaper,}} >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleToggle}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
@@ -133,15 +133,22 @@ function NavBar(){
           {['Accesorios', 'Monitores', 'PC', 'Impresoras'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={text} />                      
             </ListItem>
           ))}
         </List>
         <Divider />
         <List>
+            <ListItem button key="Carrito">
+              <ListItemIcon><ShoppingCartIcon /></ListItemIcon>
+              <ListItemText primary="Carrito"/>                      
+            </ListItem>
+        </List>
+        <Divider />
+        <List>
           {['Quienes Somos?','Contacto'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>{index % 2 === 0 ? <EmojiPeopleIcon /> : <ContactPhoneIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}

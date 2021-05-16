@@ -16,6 +16,11 @@ const customTheme = createMuiTheme({
       main:'#ff0066'
     },
   },
+  typography: {
+    body2: {
+      fontSize: "1.5rem;"
+    },
+  },
 });
 //#endregion
 
