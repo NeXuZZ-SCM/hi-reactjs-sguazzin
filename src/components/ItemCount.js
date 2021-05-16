@@ -2,9 +2,8 @@ import React from 'react'
 import { useState, useEffect } from "react";
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
+import {Add, Remove} from '@material-ui/icons';
 
-import AddIcon from '@material-ui/icons/Add';
-import RemoveIcon from '@material-ui/icons/Remove';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,13 +25,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const classes = useStyles();
     const [estado, setEstado] = useState(initial);
 
-
-    console.log(stock);
-
     useEffect(() => {
       console.log(`Hiciste click ${estado} veces`);
     }, [estado]);
   
+    //#region Funciones de incremento y decremento
     const incrementar = (e) => {
         if(stock > estado){
             setEstado((estado) => {
@@ -52,17 +49,18 @@ const ItemCount = ({stock, initial, onAdd}) => {
             
         }
     };
+    //#endregion
 
     return (
         <>
         <div className={classes.container}>
             <div className={classes.root}>
                 <IconButton onClick={reducir} >
-                    <RemoveIcon />
+                    <Remove />
                 </IconButton>
                 {estado}
                 <IconButton onClick={incrementar}>
-                    <AddIcon />
+                    <Add />
                 </IconButton>
             </div>
         </div>

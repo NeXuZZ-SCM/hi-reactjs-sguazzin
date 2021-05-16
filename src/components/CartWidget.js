@@ -9,5 +9,4 @@ const CartWidget = () => {
             </IconButton>
     )
 }
-
 export default CartWidget
