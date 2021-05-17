@@ -4,6 +4,8 @@ import ItemCount from './components/ItemCount';
 import { useState } from "react";
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
+import NavBar from './components/NavBar';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,6 +40,7 @@ function App() {
 
   return (
     <>
+      <NavBar />
       <div className="App">
         <ItemCount stock={5} initial={1} onAdd={modificarCantidad}/>
       </div>
