@@ -13,10 +13,9 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
     icon: {
-        minWidth: '30px',
+        minWidth: '30px', 
     }
   }));
-
 
 const MobileMenu = ({estado, onAddMenuLateral}) => {
     const theme = useTheme();

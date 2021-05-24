@@ -1,8 +1,8 @@
 import React from 'react';
 import {AppBar, ListItemIcon, Hidden, makeStyles, Toolbar, Typography, Button, ClickAwayListener, Grow, Paper, Popper, MenuItem, MenuList} from '@material-ui/core';
 import {Store, Computer} from '@material-ui/icons';
-import CartWidget from './CartWidget';
-import {MobileMenu, HamburgerMenu} from './NavBarComponents/MobileMenu.js';
+import CartWidget from '../CartWidget/CartWidget';
+import {MobileMenu, HamburgerMenu} from '../NavBarComponents/MobileMenu.js';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
         minWidth: '30px',
     }
   }));
-
 
 function NavBar(){
     //#region Const
