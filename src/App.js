@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-      <NavBar />
       <BrowserRouter>
+      <NavBar />
       <Switch>
         <Route exact path="/">
           <ItemListContainer/>
