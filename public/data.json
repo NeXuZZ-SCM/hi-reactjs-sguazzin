@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "categoriId": "1",
+    "nombre": "Producto 1",
+    "precio": "30",
+    "detalles": "detalle del producto 1",
+    "image": "../../assets/img/curso1.png"
+  },
+  {
+    "id": "2",
+    "categoriId": "1",
+    "nombre": "Producto 2",
+    "precio": "30",
+    "detalles": "detalle del producto 2",
+    "image": "curso2"
+  },
+  {
+    "id": "3",
+    "categoriId": "2",
+    "nombre": "Producto 3",
+    "precio": "30",
+    "detalles": "detalle del producto 3",
+    "image": "curso3"
+  },
+  {
+    "id": "4",
+    "categoriId": "2",
+    "nombre": "Producto 4",
+    "precio": "30",
+    "detalles": "detalle del producto 4",
+    "image": "curso1"
+  },
+  {
+    "id": "5",
+    "categoriId": "3",
+    "nombre": "Producto 5",
+    "precio": "30",
+    "detalles": "detalle del producto 5",
+    "image": "curso2"
+  },
+  {
+    "id": "6",
+    "categoriId": "4",
+    "nombre": "Producto 6",
+    "precio": "30",
+    "detalles": "detalle del producto 6",
+    "image": "curso3"
+  }
+]
