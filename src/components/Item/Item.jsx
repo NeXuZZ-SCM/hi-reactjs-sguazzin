@@ -10,11 +10,11 @@ import {
 
 const Item = ({ children, id, rank, symbol, image }) => {
   const classes = useStyles();
-  const [cantidad, setCantidad] = useState(1);
+  // const [cantidad, setCantidad] = useState(1);
 
-  const modificarCantidad = (cantidad) => {
-    setCantidad(cantidad);
-  };
+  // const modificarCantidad = (cantidad) => {
+  //   setCantidad(cantidad);
+  // };
   console.log("estoy en item");
   return (
     <Card className={classes.root}>
@@ -34,13 +34,13 @@ const Item = ({ children, id, rank, symbol, image }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <ItemCount stock={5} initial={1} onAdd={modificarCantidad} />
-        <Button variant="outlined" color="secondary">
+        {/* <ItemCount stock={5} initial={1} onAdd={modificarCantidad} /> */}
+        {/* <Button variant="outlined" color="secondary">
           Agregar al carrito (
           {cantidad}
           )
           {' '}
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
   );
