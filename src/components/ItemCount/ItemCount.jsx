@@ -25,7 +25,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   const [estado, setEstado] = useState(initial)
 
   useEffect(() => {
-    console.log(`Hiciste click ${estado} veces`)
+    // console.log(`Hiciste click ${estado} veces`)
   }, [estado])
 
   // #region Funciones de incremento y decremento

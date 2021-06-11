@@ -89,14 +89,14 @@ const ItemDetailContainer = () => {
     const getItem = new Promise((resolve, reject) => {
       setTimeout(function () {
         resolve(productos) // {0} es en realidad el futuro id que debiera tener esto para poder irlo a buscar
-      }, 3000)
+      }, 1)
     })
 
     productId ?
       getItem.then(
         function (value) {
-          console.log('La promesa devuelve: ' + value)
-          console.log('La promesa devuelve: ' + productId)
+          // console.log('La promesa devuelve: ' + value)
+          // console.log('La promesa devuelve: ' + productId)
           setItem(value.filter(i => i.id === productId))
         },
         function (reason) {

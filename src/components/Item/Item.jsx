@@ -15,7 +15,7 @@ const Item = ({ children, id, rank, symbol, image }) => {
   // const modificarCantidad = (cantidad) => {
   //   setCantidad(cantidad);
   // };
-  console.log("estoy en item");
+  // console.log("estoy en item");
   return (
     <Card className={classes.root}>
       <CardActionArea component={Link} to={'/item/' + id}>

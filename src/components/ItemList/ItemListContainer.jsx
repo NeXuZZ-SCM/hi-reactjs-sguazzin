@@ -16,7 +16,7 @@ const ItemListContainer = () => {
   const { categoryId } = useParams();
 
   useEffect(() => {
-    console.log("cambio de estado en ItemListContainer");
+    // console.log("cambio de estado en ItemListContainer");
 
   }, [categoryId])
 

@@ -27,7 +27,7 @@ const MobileMenu = ({ estado, onAddMenuLateral }) => {
     const classes = useStyles();
     const [subMenu, setsubMenu] = React.useState(estado);
 
-    console.log("MOBILE MENU ESTADO: ", estado);
+    // console.log("MOBILE MENU ESTADO: ", estado);
     const handleToggleMenu = () => {
 
         setsubMenu((estadoNuevo) => {
@@ -96,7 +96,7 @@ const HamburgerMenu = ({ estado, onAddMenuHam }) => {
     const [subMenuHambu, setsubMenuHambu] = React.useState(false);
 
     const handleToggleMenu = () => {
-        console.log("Menu Hamburgesa Estado:", subMenuHambu);
+        // console.log("Menu Hamburgesa Estado:", subMenuHambu);
 
         setsubMenuHambu((estadoNuevo) => {
             if (estado == true) {

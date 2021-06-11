@@ -85,7 +85,7 @@ const ItemList = ({ categoryIdApp }) => {
       setLoader(true);
       setTimeout(function () {
         resolve(product) // {0} es en realidad el futuro id que debiera tener esto para poder irlo a buscar
-      }, 1000)
+      }, 1)
     })
 
 
@@ -112,7 +112,7 @@ const ItemList = ({ categoryIdApp }) => {
 
   }, [categoryIdApp])
 
-  console.log(`La categoria es: ${categoryIdApp}`);
+  // console.log(`La categoria es: ${categoryIdApp}`);
 
 
   return (

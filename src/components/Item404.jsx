@@ -1,7 +1,10 @@
 import React from 'react'
 import curso1 from '../assets/img/404.gif'
+import { useCart } from '../components//Context/CartContext';
 
 const Item404 = () => {
+  const producto = useCart();
+  console.log("En ITEM 404" + { producto });
   return (
     <div Style="text-align:center;">
       <article>
