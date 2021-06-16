@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "categoriId": 1,
+    "nombre": "de 0 a Samuray",
+    "precio": 350,
+    "detalles": "detalle del producto 1",
+    "image": "https://raw.githubusercontent.com/NeXuZZ-SCM/hi-reactjs-sguazzin/master/src/assets/img/curso1.png",
+    "descripcion": "AAA BBBB CCCC"
+  },
+  {
+    "id": 2,
+    "categoriId": 2,
+    "nombre": "Comandante Responsivo",
+    "precio": 320,
+    "detalles": "detalle del producto 2",
+    "image": "https://raw.githubusercontent.com/NeXuZZ-SCM/hi-reactjs-sguazzin/master/src/assets/img/curso2.png",
+    "descripcion": "AAA BBBB CCCC"
+  },
+  {
+    "id": 3,
+    "categoriId": 1,
+    "nombre": "El gato y la caja",
+    "precio": 200,
+    "detalles": "detalle del producto 3",
+    "image": "https://raw.githubusercontent.com/NeXuZZ-SCM/hi-reactjs-sguazzin/master/src/assets/img/curso3.png",
+    "descripcion": "AAA BBBB CCCC"
+  },
+  {
+    "id": 4,
+    "categoriId": 4,
+    "nombre": "Curso 4",
+    "precio": 150,
+    "detalles": "detalle del producto 4",
+    "image": "https://raw.githubusercontent.com/NeXuZZ-SCM/hi-reactjs-sguazzin/master/src/assets/img/curso1.png",
+    "descripcion": "AAA BBBB CCCC"
+  },
+  {
+    "id": 5,
+    "categoriId": 3,
+    "nombre": "Curso 5",
+    "precio": 250,
+    "detalles": "detalle del producto 5",
+    "image": "https://raw.githubusercontent.com/NeXuZZ-SCM/hi-reactjs-sguazzin/master/src/assets/img/curso2.png",
+    "descripcion": "AAA BBBB CCCC"
+  },
+  {
+    "id": 6,
+    "categoriId": 3,
+    "nombre": "Curso 6",
+    "precio": 320,
+    "detalles": "detalle del producto 6",
+    "image": "https://raw.githubusercontent.com/NeXuZZ-SCM/hi-reactjs-sguazzin/master/src/assets/img/curso3.png",
+    "descripcion": "AAA BBBB CCCC"
+  }
+]

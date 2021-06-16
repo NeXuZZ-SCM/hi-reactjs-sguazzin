@@ -5,15 +5,14 @@ import CarouselMUI from './components/Carousel/Carousel';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import ItemListContainer from './components/ItemList/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
-import Item404 from '../src/components/Item404';
-import { CartProvider } from './components/Context/CartContext';
-
+import Cart from './components/Cart/Cart'
+import DataProvider from './components/Context/DataContext';
 
 
 
 function App() {
   return (
-    <CartProvider>
+    <DataProvider>
       <BrowserRouter>
         <NavBar />
         <CarouselMUI />
@@ -28,11 +27,11 @@ function App() {
             <ItemDetailContainer />
           </Route>
           <Route exact path="/cart" >
-            <Item404 />
+            <Cart />
           </Route>
         </Switch>
       </BrowserRouter>
-    </CartProvider>
+    </DataProvider>
   )
 }
 

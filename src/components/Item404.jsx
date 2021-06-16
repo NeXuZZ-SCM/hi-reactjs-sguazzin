@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import curso1 from '../assets/img/404.gif'
-import { useCart } from '../components//Context/CartContext';
-
+import { useDataContext } from './Context/DataContext';
 const Item404 = () => {
-  const producto = useCart();
-  console.log("En ITEM 404" + { producto });
+
+  // const { data } = useContext(DataContext)
+  const carrito = useDataContext();
+
   return (
     <div Style="text-align:center;">
       <article>
+        {JSON.stringify(carrito.data)}
         <h1>Lo siento, algunas paginas aun no estan terminadas</h1>
         <h2>404 ERROR</h2>
       </article>
