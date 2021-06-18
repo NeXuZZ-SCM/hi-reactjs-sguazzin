@@ -35,7 +35,7 @@ const ItemDetail = ({ item }) => {
     carrito.addItem({
       nombre: item.nombre,
       cantidad: cantidad,
-      precioTotal: item.precio,
+      precio: item.precio
     });
   }
 
